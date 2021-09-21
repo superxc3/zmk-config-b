@@ -25,8 +25,8 @@
 // | LCTRL(LPAR) |  Z  |  X  |  C  |  V  |  BSPC  |   |  B  |  N   |  M  |  ,  |  .  | / |
 //                         | ALT | LSHFT ENTER | SPC | SPC  | GUI(CAPSLOCK) |
                         bindings = <
-   &lt LOWER ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &lt LOWER MINUS
-   &lt RAISE TAB &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &lt 1 ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &lt 1 MINUS
+   &lt 2 TAB &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &mt LCTRL LPAR &kp Z &kp X &kp C &kp V &kp BSPC   &kp B &kp N  &kp M &kp COMMA &kp DOT &kp FSLH
                         &kp LALT  &mt LSHIFT RET &kp SPACE &kp SPACE  &mt LGUI CAPS
                         >;
