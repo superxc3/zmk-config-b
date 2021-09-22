@@ -68,7 +68,7 @@
 //    |   VOL DOWN  | VOL UP  |     | MEDIA PRE    |   MEDIA NXT  |
                         bindings = <
    &rgb_ug RGB_TOG        &kp N1      &kp N2        &kp N3       &kp N4       &kp N5    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-   &rgb_ug RGB_EFF        &none        &kp LG(LS(S)        &none        &kp UP       &none                  &none        &none        &none        &none        &none        &none
+   &rgb_ug RGB_EFF        &none        &none         &none        &kp UP       &none                  &none        &none        &none        &none        &none        &none
    &rgb_ug RGB_EFR        &none        &none        &kp LEFT     &kp DOWN     &kp RIGHT             &none       &none        &kp K_PP       &none        &none        &none
            &kp K_VOL_UP      &kp K_VOL_DN       &none        &kp K_PREV      &kp K_NEXT
                         >;
