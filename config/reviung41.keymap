@@ -23,26 +23,26 @@
 // | LT(1) ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  LT(1) -  |
 // | LT(2) TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  LT(1) J   |  K  |  L  |  ;  |    '      |
 // | LCTRL(LPAR) |  Z  |  X  |  C  |  V  |  BSPC  |   |  B  |  N   |  M  |  ,  |  .  | / |
-//                         | ALT | LSHFT ENTER | SPC | LT(3) SPC  | GUI(CAPSLOCK) |
+//                         | ALT | LSHFT ENTER | LT (3) SPC |  LT (1) ENT  | GUI(CAPSLOCK) |
                         bindings = <
    &lt 1 ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &lt 1 MINUS
    &lt 2 TAB &kp A &kp S &kp D &kp F &kp G   &kp H &lt 1 J  &kp K     &kp L   &kp SEMI &kp SQT
    &mt LCTRL LPAR &kp Z &kp X &kp C &kp V &kp BSPC   &kp B &kp N  &kp M &kp COMMA &kp DOT &kp FSLH
-                        &kp LALT  &mt LSHIFT RET &kp SPACE &lt 1 SPACE  &mt LGUI CAPS
+                        &kp LALT  &mt LSHIFT RET &lt 3 SPACE &lt 1 RET  &mt LGUI CAPS
                         >;
                 };
 
                 lower_layer {
 // ----------------------------------------------------------------------------------
 // |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |    DEL    |
-// |    |  _  |  +  |  {  |  }  | "|" |   | ) | DWN |  UP | RGT |  UP  |     ~     |
+// |    |  _  |  +  |  {  |  }  | "|" |   | ) |  |        |          |  UP |    ~  |
 // |    | ESC | GUI | ALT | CAPS|  DEL  |   | HOME| END | PGUP| LEFT | DOWN| RIGHT |
-//                       |     |     | RET | ADJ |     |
+//                       |     |  GUI | RET | ADJ |     |
                         bindings = <
-   &kp GRAVE &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS &kp N8    &kp LPAR  &kp RPAR  &kp DEL
-   &trans &kp MINUS &kp KP_PLUS &kp LBRC &kp RBRC &kp PIPE       &kp KP_RPAR  &kp DOWN &kp UP    &kp RIGHT &kp UP &kp GRAVE
+   &kp GRAVE &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS &kp ASTERISK    &kp LPAR  &kp RPAR  &kp DEL
+   &trans &kp MINUS &kp KP_PLUS &kp LBRC &kp RBRC &kp PIPE       &kp RPAR  &trans &trans &trans &kp UP &kp GRAVE
    &trans &kp ESC   &kp LGUI    &kp LALT &kp CLCK &kp DEL       &kp HOME  &kp END  &kp PG_UP &kp LEFT &kp DOWN &kp RIGHT
-                                 &trans      &trans       &kp RET        &mo 3       &trans
+                                 &trans      &kp LGUI       &kp RET        &mo 3       &trans
                         >;
                 };
 
@@ -53,24 +53,24 @@
 // |    | ESC | GUI | ALT | CAPS|  "  |   | 1  | 2  | 3  | F10 | = | ENT |
 //                       |     | ADJ | BKSP | 0   |  .   |
                         bindings = <
-   &trans &kp HOME    &kp LG(UP)    &kp END    &kp N4    &kp N5        &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_DIVIDE    &kp KP_MULTIPLY    &kp KP_MINUS
-   &trans &kp LG(LEFT) &kp LG(DOWN) &kp LG(RIGHT)  &kp RBKT  &kp BSLH      &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp F4    &kp F5    &kp KP_PLUS
-   &trans &kp ESC   &kp LGUI  &kp RALT  &kp CLCK  &kp SQT       &kp KP_N1   &kp KP_N2    &kp KP_N3    &kp F10   &kp KP_EQUAL   &kp KP_ENTER
-                                &trans      &mo 3       &kp BSPC        &kp KP_N0      &kp KP_DOT
+   &trans &kp HOME    &kp LG(UP)    &kp END    &kp N4    &kp N5        &kp N7    &kp N8    &kp N9    &kp KP_DIVIDE    &kp KP_MULTIPLY    &kp KP_MINUS
+   &trans &kp LG(LEFT) &kp LG(DOWN) &kp LG(RIGHT)  &kp RBKT  &kp BSLH      &kp N4    &kp N5    &kp N6    &kp F4    &kp F5    &kp KP_PLUS
+   &trans &kp ESC   &kp LGUI  &kp RALT  &kp CLCK  &kp SQT       &kp N1   &kp N2    &kp N3    &kp F10   &kp KP_EQUAL   &kp KP_ENTER
+                                &trans      &mo 3       &kp BSPC        &kp N0      &kp KP_DOT
                         >;
                 };
 
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
-// | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
-// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI+ |    |         |   |       |     |     |     |     |        |
-// |          |          |          |          |    |         |   | RESET |     |     |     |     |        |
-//                                              |     |     |     |     |     |
+// | RGB TOG  | 1 | 2 | 3 |  4  | 5 |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
+// | RGB ANI+ |  | S(G(KC_S)  |  |  UP  |      |   |       |     |     |     |     |        |
+// | RGB ANI- |  |  |LEFT|  DOWN  |     RIGHT    |   |       |     | PLAYPAUSE |     |     |        |
+//    |   VOL DOWN  | VOL UP  |     | MEDIA PRE    |   MEDIA NXT  |
                         bindings = <
-   &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none &rgb_ug RGB_TOG    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-   &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none &none              &none        &none        &none        &none        &none        &none
-   &none           &none           &none           &none           &none &none              &reset       &none        &none        &none        &none        &none
-                                                             &trans      &trans       &tog 3        &trans      &trans
+   &rgb_ug RGB_TOG        &kp N1      &kp N2        &kp N3       &kp N4       &kp N5    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
+   &rgb_ug RGB_EFF        &none        &kp LG(LS(S)        &none        &kp UP       &none                  &none        &none        &none        &none        &none        &none
+   &rgb_ug RGB_EFR        &none        &none        &kp LEFT     &kp DOWN     &kp RIGHT             &none       &none        &kp K_PP       &none        &none        &none
+           &kp K_VOL_UP      &kp K_VOL_DN       &none        &kp K_PREV      &kp K_NEXT
                         >;
                 };
         };
