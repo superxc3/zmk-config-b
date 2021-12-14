@@ -42,7 +42,7 @@
    &kp GRAVE &kp EXCL         &kp AT            &kp HASH &kp DLLR &kp PRCNT     &kp CARET &kp AMPS &kp ASTERISK  &kp LPAR  &kp RPAR  &kp BACKSLASH
    &trans    &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LBRC &kp RBRC &kp PIPE      &kp RPAR  &trans   &trans        &trans    &kp UP    &kp GRAVE
    &trans    &kp ESC          &kp LGUI          &kp LALT &kp CLCK &kp DEL       &trans    &trans   &trans        &kp LEFT  &kp DOWN  &kp RIGHT
-                              &kp HOME          &kp RET      &kp LA(LSHIFT)    &kp LC(RIGHT_ARROW)       &kp END
+                              &kp HOME          &kp LC(LEFT_ARROW)      &kp LA(LSHIFT)    &kp LC(RIGHT_ARROW)       &kp END
                         >;
                 };
 
