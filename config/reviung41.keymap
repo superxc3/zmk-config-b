@@ -62,13 +62,13 @@
 
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
-// | RGB TOG  | 1 | 2 | 3 |  4  | 5 |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
-// | RGB ANI+ |  | S(G(KC_S)  |  |  UP  |      |   |       |     |     |     |     |        |
-// | RGB ANI- |  |  |LEFT|  DOWN  |     RIGHT    |   |       |     | PLAYPAUSE |     |     |        |
-//    |   VOL DOWN  | VOL UP  |     | MEDIA PRE    |   MEDIA NXT  |
+// | RGB TOG  | 1     | 2          |    3       |  HOME  | END          |   |  BT1  | BT2 |     BT3   | BT4 | BT5 | BT CLR |
+// | RGB ANI+ |       | S(G(KC_S)  | C(KC_LEFT) |  UP    |  C(KC_RIGHT) |   |       |     |           |     |     |        |
+// | RGB ANI- |       |            |    LEFT    |  DOWN  |     RIGHT    |   |       |     | PLAYPAUSE |     |     |        |
+//                                             |   VOL DOWN  | VOL UP  |     | MEDIA PRE    |   MEDIA NXT  |
                         bindings = <
-   &rgb_ug RGB_TOG        &kp N1      &kp N2        &kp N3       &kp N4       &kp N5    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-   &rgb_ug RGB_EFF        &none        &kp LG(LS(S))         &none        &kp UP       &none                  &none        &none        &none        &none        &none        &none
+   &rgb_ug RGB_TOG        &kp N1      &kp N2        &kp N3       &kp HOME       &kp END    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
+   &rgb_ug RGB_EFF        &none        &kp LG(LS(S))        &kp LC(LEFT_ARROW)       &kp UP       &kp LC(RIGHT_ARROW)                  &none        &none        &none        &none        &none        &none
    &rgb_ug RGB_EFR        &none        &none        &kp LEFT     &kp DOWN     &kp RIGHT             &none       &none        &kp K_PP       &none        &none        &none
            &kp C_VOL_UP      &kp C_VOL_DN       &none        &kp C_PREVIOUS      &kp C_NEXT
                         >;
