@@ -51,12 +51,12 @@
 // |CALC|  HOME  |  G(UP)  |  END  |  4  |  5  |   |  7  | 8  |  9  |  /  |  *  | - |
 // |    |  G(LEFT)  | G(DOWN) |  G(RIGHT)  |  ]  |  \  |   | 4  | 5  | 6  | F4  | F5  | +  |
 // |    | ESC | GUI | ALT | CAPS|  "  |   | 1  | 2  | 3  | F10 | = | ENT |
-//                       | ESC | BACKSPACE | = | 0   |  .   |
+//                       | ESC | ENTER | = | 0   |  .   |
                         bindings = <
    &kp C_AL_CALCULATOR &kp HOME    &kp LG(UP)    &kp END    &kp N4    &kp N5        &kp N7    &kp N8    &kp N9    &kp KP_DIVIDE    &kp KP_MULTIPLY    &kp KP_MINUS
    &trans &kp LG(LEFT) &kp LG(DOWN) &kp LG(RIGHT)  &kp RBKT  &kp BSLH      &kp N4    &kp N5    &kp N6    &kp F4    &kp F5    &kp KP_PLUS
    &trans &kp ESC   &kp LGUI  &kp RALT  &kp CLCK  &kp SQT       &kp N1   &kp N2    &kp N3    &kp F10   &kp EQUAL   &kp KP_ENTER
-                                &kp ESC      &kp BSPC       &kp EQUAL        &kp N0      &kp KP_DOT
+                                &kp ESC      &kp RET       &kp EQUAL        &kp N0      &kp KP_DOT
                         >;
                 };
 
