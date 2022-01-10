@@ -13,6 +13,7 @@
 #define LOWER   1
 #define RAISE   2
 #define ADJUST  3
+#define GAMING  4
 
 / {
         keymap {
@@ -40,7 +41,7 @@
 //                       |  HOME  |  C(KC_ARROW LEFT) |CHINESE| C(KC_ARROW LEFT) |   END  |
                         bindings = <
    &kp GRAVE &kp EXCL         &kp AT            &kp HASH &kp DLLR &kp PRCNT     &kp CARET &kp AMPS &kp ASTERISK  &kp LPAR  &kp RPAR  &kp BACKSLASH
-   &trans    &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LBRC &kp RBRC &kp PIPE      &kp RPAR  &trans   &trans        &trans    &kp UP    &kp GRAVE
+   &trans    &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LBRC &kp RBRC &kp PIPE      &kp RPAR  &trans   &trans        &to 0    &kp UP    &to 4
    &trans    &kp ESC          &kp LGUI          &kp LALT &kp CLCK &kp DEL       &trans    &trans   &trans        &kp LEFT  &kp DOWN  &kp RIGHT
                               &kp HOME          &kp RET      &kp LA(LSHIFT)    &kp LC(RIGHT_ARROW)       &kp END
                         >;
@@ -48,14 +49,14 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |CALC|  HOME  |  G(UP)  |  END  |  4  |  5  |   |  7  | 8  |  9  |  /  |  *  | - |
+// |CALC|  HOME  |  G(UP)  |  END  |  4  |  5  |   |  7  | 8  |  9  |  =  |  *  | - |
 // |    |  G(LEFT)  | G(DOWN) |  G(RIGHT)  |  ]  |  \  |   | 4  | 5  | 6  | F4  | F5  | +  |
-// |    | ESC | GUI | ALT | CAPS|  "  |   | 1  | 2  | 3  | F10 | = | ENT |
+// |    | ESC | GUI | ALT | CAPS|  "  |   | 1  | 2  | 3  | F10 | = | / |
 //                       | ESC | ENTER | = | 0   |  .   |
                         bindings = <
-   &kp C_AL_CALCULATOR &kp HOME    &kp LG(UP)    &kp END    &kp N4    &kp N5        &kp N7    &kp N8    &kp N9    &kp KP_DIVIDE    &kp KP_MULTIPLY    &kp KP_MINUS
+   &kp C_AL_CALCULATOR &kp HOME    &kp LG(UP)    &kp END    &kp N4    &kp N5        &kp N7    &kp N8    &kp N9    &kp EQUAL    &kp KP_MULTIPLY    &kp KP_MINUS
    &trans &kp LG(LEFT) &kp LG(DOWN) &kp LG(RIGHT)  &kp RBKT  &kp BSLH      &kp N4    &kp N5    &kp N6    &kp F4    &kp F5    &kp KP_PLUS
-   &trans &kp ESC   &kp LGUI  &kp RALT  &kp CLCK  &kp SQT       &kp N1   &kp N2    &kp N3    &kp F10   &kp EQUAL   &kp KP_ENTER
+   &trans &kp ESC   &kp LGUI  &kp RALT  &kp CLCK  &kp SQT       &kp N1   &kp N2    &kp N3    &kp F10   &kp EQUAL   &kp KP_DIVIDE
                                 &kp ESC      &kp RET       &kp EQUAL        &kp N0      &kp KP_DOT
                         >;
                 };
@@ -73,5 +74,25 @@
            &kp C_VOL_UP      &kp C_VOL_DN       &none        &kp C_PREVIOUS      &kp C_NEXT
                         >;
                 };
+                
+                      gaming_layer {
+// -------------------------------------------------------------------------------------
+// | ESC   |  Q  |  W  |  E  |  R  |  T  |                 |  Y  |      U     |  I  |  O  |  P  |    LT(1) -  |
+// | TAB   |  A  |  S  |  D  |  F  |  G  |                 |  H  |      J     |  K  |  L  |  ;  |       '     |
+// | LCTRL |  Z  |  X  |  C  |  V  |BSPC |                 |  B  |      N     |  M  |  ,  |  .  | RIGHT ARROW |
+//                              | ALT |  SPC |    LEFT    |  ENT  | GUI(CAPSLOCK) |
+                        bindings = <
+   &kp ESC      &kp Q &kp W &kp E &kp R &kp T             &kp Y &kp U    &kp I     &kp O     &kp P     &lt 1 MINUS
+   &kp TAB      &kp A &kp S &kp D &kp F &kp G             &kp H &lt 1 J  &kp K     &kp L     &kp SEMI  &kp SQT
+   &kp LCTRL    &kp Z &kp X &kp C &kp V &kp BSPC          &kp B &kp N    &kp M     &kp COMMA &kp DOT  &kp RIGHT
+                        &kp LALT  &kp LSHIFT   &kp LEFT  &kp RET  &mt LGUI CAPS       
+                
+                        >;
+                };
+            
+                
+                
+             
+
         };
 };
