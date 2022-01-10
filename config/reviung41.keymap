@@ -36,12 +36,12 @@
                 lower_layer {
 // ----------------------------------------------------------------------------------
 // | ~  |  !  |  @  |  #  |  $  |  %  |       |  ^  |  &  |  *  |  (  |  )  |    \  |
-// |    |  [  |  ]  |  {  |  }  | "|" |       | )   |     |     |     |  UP |    ~  |
+// |    |  [  |  ]  |  {  |  }  | "|" |       | )   |     |     |  to layer 0   |  UP |  to layer 4 |
 // |    | ESC | GUI | ALT | CAPS|  DEL|       |     |     |     | LEFT| DOWN| RIGHT |
 //                       |  HOME  |  C(KC_ARROW LEFT) |CHINESE| C(KC_ARROW LEFT) |   END  |
                         bindings = <
    &kp GRAVE &kp EXCL         &kp AT            &kp HASH &kp DLLR &kp PRCNT     &kp CARET &kp AMPS &kp ASTERISK  &kp LPAR  &kp RPAR  &kp BACKSLASH
-   &trans    &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LBRC &kp RBRC &kp PIPE      &kp RPAR  &trans   &trans        &to 0    &kp UP    &to 4
+   &trans    &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LBRC &kp RBRC &kp PIPE      &kp RPAR  &trans   &trans        &to 0    &kp UP    &to 4     
    &trans    &kp ESC          &kp LGUI          &kp LALT &kp CLCK &kp DEL       &trans    &trans   &trans        &kp LEFT  &kp DOWN  &kp RIGHT
                               &kp HOME          &kp RET      &kp LA(LSHIFT)    &kp LC(RIGHT_ARROW)       &kp END
                         >;
@@ -77,15 +77,15 @@
                 
                       gaming_layer {
 // -------------------------------------------------------------------------------------
-// | ESC   |  Q  |  W  |  E  |  R  |  T  |                 |  Y  |      U     |  I  |  O  |  P  |    LT(1) -  |
+// | ESC   |  Q  |  W  |  E  |  R  |  T  |                 |  Y  |      U     |  I  |  O  |  P  | To LAYER 0  |
 // | TAB   |  A  |  S  |  D  |  F  |  G  |                 |  H  |      J     |  K  |  L  |  ;  |       '     |
 // | LCTRL |  Z  |  X  |  C  |  V  |BSPC |                 |  B  |      N     |  M  |  ,  |  .  | RIGHT ARROW |
 //                              | ALT |  SPC |    LEFT    |  ENT  | GUI(CAPSLOCK) |
                         bindings = <
-   &kp ESC      &kp Q &kp W &kp E &kp R &kp T             &kp Y &kp U    &kp I     &kp O     &kp P     &lt 1 MINUS
+   &kp ESC      &kp Q &kp W &kp E &kp R &kp T             &kp Y &kp U    &kp I     &kp O     &kp P     &to 0
    &kp TAB      &kp A &kp S &kp D &kp F &kp G             &kp H &lt 1 J  &kp K     &kp L     &kp SEMI  &kp SQT
    &kp LCTRL    &kp Z &kp X &kp C &kp V &kp BSPC          &kp B &kp N    &kp M     &kp COMMA &kp DOT  &kp RIGHT
-                        &kp LALT  &kp LSHIFT   &kp LEFT  &kp RET  &mt LGUI CAPS       
+                        &kp LALT  &kp SPACE  &kp LEFT  &kp RET  &mt LGUI CAPS       
                 
                         >;
                 };
