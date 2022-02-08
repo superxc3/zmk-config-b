@@ -65,12 +65,12 @@
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
 // | RGB TOG  | 1     | 2          |    3       |  4     |   5          |   |  HOME  | END |    *      |   [    |    ]   |     |    |
-// | RGB ANI+ |       | S(G(KC_S)  | C(KC_LEFT) |  UP    |  C(KC_RIGHT) |   |        |     |           |   BT1  |  BT2   |    BT3   |
+// | RGB ANI+ |       | S(G(KC_S)  | C(KC_LEFT) |  UP    |  C(KC_RIGHT) |   |        |  Power off   |  Power on   |   BT1  |  BT2   |    BT3   |
 // | RGB ANI- |       |            |    LEFT    |  DOWN  |     RIGHT    |   |        |     | PLAYPAUSE | BT4    |  BT5   |  BT CLR  |
 //                                              |VOL DOWN|    VOL UP    |   | MEDIA PRE    | MEDIA NXT |
                         bindings = <
    &rgb_ug RGB_TOG        &kp N1      &kp N2       &kp N3               &kp N4    &kp N5                        &kp HOME    &kp END    &kp ASTERISK &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PIPE2 
-   &rgb_ug RGB_EFF        &none       &kp LG(LS(S))&kp LC(LEFT_ARROW)   &kp UP    &kp LC(RIGHT_ARROW)           &none       &none      &none        &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2
+   &rgb_ug RGB_EFF        &none       &kp LG(LS(S))&kp LC(LEFT_ARROW)   &kp UP    &kp LC(RIGHT_ARROW)           &none       &ext_power EP_OFF      &ext_power EP_ON        &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2
    &rgb_ug RGB_EFR        &none       &none        &kp LEFT             &kp DOWN  &kp RIGHT                     &none       &none      &kp K_PP     &bt BT_SEL 3     &bt BT_SEL 4      &bt BT_CLR
                                                                 &kp C_VOL_UP      &kp C_VOL_DN       &none      &kp C_PREVIOUS      &kp C_NEXT
                         >;
