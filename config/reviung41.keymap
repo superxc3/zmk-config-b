@@ -30,34 +30,34 @@
    &lt 1 ESC      &kp Q &kp W &kp E &kp R &kp T             &kp Y &kp U    &kp I     &kp O     &kp P     &lt 1 MINUS
    &lt 2 TAB      &kp A &kp S &kp D &kp F &kp G             &kp H &lt 1 J  &kp K     &kp L     &kp SEMI  &kp SQT
    &mt LCTRL LPAR &kp Z &kp X &kp C &kp V &kp BSPC          &kp B &kp N    &kp M     &kp COMMA &kp DOT   &kp FSLH
-                        &kp LALT  &kp LSHIFT   &lt 3 SPACE  &lt 1 KP_ENTER  &mt LGUI CAPS
+                        &kp LALT  &kp LSHIFT   &lt 3 SPACE  &lt 1 RET  &mt LGUI CAPS
                         >;
                 };
 
                 lower_layer {
 // ----------------------------------------------------------------------------------
-// | ~  |  !  |  @  |  #  |  $  |  %  |       |  ^  |  &  |  *  |  (  |  )  |    \  |
-// |    |  [  |  ]  |  {  |  }  | "|" |       | )   |     |     |  [  |  ]  |   |   |
-// |    | ESC | GUI | ALT | CAPS|  DEL|       |     |     |     | LEFT| DOWN| RIGHT |
-//                       |  HOME  |  C(KC_ARROW LEFT) |CHINESE| C(KC_ARROW LEFT) |   END  |
+// | ~  |  !  |  @  |  #  |  $  |  %  |       |  ^  |  &  |  *  |  (  |  )  |  \  |
+// |    |     |     |     |     |     |       | )   |  {  |  }  |  [  |  ]  |  |  |
+// |    |     |     |     |     |  DEL|       | pgup| pgdn| Home| End | c(←)| c(→)|
+//                       |  HOME  | NumpadENT  |CHINESE|   |   END  |
                         bindings = <
-   &kp GRAVE &kp EXCL         &kp AT            &kp HASH &kp DLLR &kp PRCNT     &kp CARET &kp AMPS &kp ASTERISK  &kp LPAR  &kp RPAR  &kp BACKSLASH
-   &trans    &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LBRC &kp RBRC &kp PIPE      &kp RPAR  &trans   &trans        &kp LEFT_BRACKET   &kp RIGHT_BRACKET    &kp PIPE    
-   &trans    &kp ESC          &kp LGUI          &kp LALT &kp CLCK &kp DEL       &trans    &trans   &trans        &kp LEFT  &kp DOWN  &kp RIGHT
-                              &kp HOME          &kp RET      &kp LA(LSHIFT)    &kp LC(RIGHT_ARROW)       &kp END
+   &kp GRAVE &kp EXCL  &kp AT      &kp HASH     &kp DLLR  &kp PRCNT     &kp CARET &kp AMPS  &kp ASTERISK  &kp LPAR           &kp RPAR             &kp BACKSLASH
+   &trans    &trans    &trans      &trans       &trans    &trans        &kp RPAR  &kp LBRC  &kp RBRC      &kp LEFT_BRACKET   &kp RIGHT_BRACKET    &kp PIPE    
+   &trans    &trans    &trans      &trans       &trans    &kp DEL       &kp PG_UP &kp PG_DN &kp HOME      &kp END            &kp LC(LEFT_ARROW)   &kp LC(RIGHT_ARROW)
+                              &kp HOME          &kp KP_ENTER      &kp LA(LSHIFT)    &kp LC(RIGHT_ARROW)       &kp END
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |CALC|  HOME  |  G(UP)  |  END  |  4  |  5  |   |  7  | 8  |  9  |  =  |  *  | - |
-// |    |  G(LEFT)  | G(DOWN) |  G(RIGHT)  |  ]  |  \  |   | 4  | 5  | 6  | F4  | F5  | +  |
-// |    | ESC | GUI | ALT | CAPS|  "  |   | 1  | 2  | 3  | F10 | = | / |
+// |CALC|  HOME  |  G(UP)  |  END   |     |     |                 | 7  | 8  |  9 |  =  |  *  | - |
+// |    | G(LEFT)| G(DOWN) |G(RIGHT)|     |     |         | 4  | 5  | 6  |     |     | + |
+// |    |    |    |    | BSPC |                                  | 1  | 2  | 3  | F10 |     | / |
 //                       | ESC | ENTER | = | 0   |  .   |
                         bindings = <
-   &kp C_AL_CALCULATOR &kp HOME    &kp LG(UP)    &kp END    &kp N4    &kp N5        &kp N7    &kp N8    &kp N9    &kp EQUAL    &kp KP_MULTIPLY    &kp KP_MINUS
-   &trans &kp LG(LEFT) &kp LG(DOWN) &kp LG(RIGHT)  &kp RBKT  &kp BSLH      &kp N4    &kp N5    &kp N6    &kp F4    &kp F5    &kp KP_PLUS
-   &trans &kp ESC   &kp LGUI  &kp RALT  &kp CLCK  &kp SQT       &kp N1   &kp N2    &kp N3    &kp F10   &kp EQUAL   &kp KP_DIVIDE
+   &kp C_AL_CALCULATOR  &kp HOME     &kp LG(UP)    &kp END        &kp N4  &kp N5        &kp N7   &kp N8    &kp N9    &kp EQUAL &kp KP_MULTIPLY    &kp KP_MINUS
+   &trans               &kp LG(LEFT) &kp LG(DOWN)  &kp LG(RIGHT)  &trans  &trans        &kp N4   &kp N5    &kp N6    &trans    &trans             &kp KP_PLUS
+   &trans               &trans       &trans        &trans         &trans  &kp BSPC      &kp N1   &kp N2    &kp N3    &kp F10   &trans             &kp KP_DIVIDE
                                 &kp ESC      &kp RET       &kp EQUAL        &kp N0      &kp KP_DOT
                         >;
                 };
@@ -65,14 +65,14 @@
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
 // | RGB TOG  | 1     | 2          |    3       |  4     |   5          |   |  HOME  | END |    *      |   [    |    ]   |     |    |
-// | RGB ANI+ |       | S(G(KC_S)  | C(KC_LEFT) |  UP    |  C(KC_RIGHT) |   |        |  Power off   |  Power on   |   BT1  |  BT2   |    BT3   |
+// | RGB ANI+ |       | S(G(KC_S)  | C(KC_LEFT) |  UP    |  C(KC_RIGHT) |   |        |     |        |   BT1  |  BT2   |    BT3   |
 // | RGB ANI- |       |            |    LEFT    |  DOWN  |     RIGHT    |   |        |     | PLAYPAUSE | BT4    |  BT5   |  BT CLR  |
 //                                              |VOL DOWN|    VOL UP    |   | MEDIA PRE    | MEDIA NXT |
                         bindings = <
    &rgb_ug RGB_TOG        &kp N1      &kp N2       &kp N3               &kp N4    &kp N5                        &kp HOME    &kp END    &kp ASTERISK &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PIPE2 
-   &rgb_ug RGB_EFF        &none       &kp LG(LS(S))&kp LC(LEFT_ARROW)   &kp UP    &kp LC(RIGHT_ARROW)           &none       &ext_power EP_OFF      &ext_power EP_ON        &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2
+   &rgb_ug RGB_EFF        &none       &kp LG(LS(S))&kp LC(LEFT_ARROW)   &kp UP    &kp LC(RIGHT_ARROW)           &none       &trans     &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2
    &rgb_ug RGB_EFR        &none       &none        &kp LEFT             &kp DOWN  &kp RIGHT                     &none       &none      &kp K_PP     &bt BT_SEL 3     &bt BT_SEL 4      &bt BT_CLR
-                                                                &kp C_VOL_UP      &kp C_VOL_DN       &none      &kp C_PREVIOUS      &kp C_NEXT
+                                                                &kp C_VOL_UP      &kp C_VOL_DN       &none      &kp C_PREVIOUS      &trans
                         >;
                 };
                 
