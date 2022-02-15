@@ -11,10 +11,10 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #define DEFAULT 0
-#define LOWER   1
-#define RAISE   2
+#define LOWER   1-symbol layer
+#define RAISE   2-numpad layer
 #define ADJUST  3
-#define GAMING  4
+#define GAMING  4-gaming layer
 
 / {
         keymap {
@@ -39,7 +39,7 @@
 // | ~  |  !  |  @  |  #  |  $  |  %  |       |  ^  |  &  |  *  |  (  |  )  |  \  |
 // |    |     |     |     |     |     |       | )   |  {  |  }  |  [  |  ]  |  |  |
 // |    |     |     |     |     |  DEL|       | pgup| pgdn| Home| End | c(←)| c(→)|
-//                       |  HOME  | NumpadENT  |CHINESE|   |   END  |
+//              |  HOME  | NumpadENT  |CHINESE|   |   END  |
                         bindings = <
    &kp GRAVE &kp EXCL  &kp AT      &kp HASH     &kp DLLR  &kp PRCNT     &kp CARET &kp AMPS  &kp ASTERISK  &kp LPAR           &kp RPAR             &kp BACKSLASH
    &trans    &trans    &trans      &trans       &trans    &trans        &kp RPAR  &kp LBRC  &kp RBRC      &kp LEFT_BRACKET   &kp RIGHT_BRACKET    &kp PIPE    
@@ -50,15 +50,15 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |CALC|  HOME  |  G(UP)  |  END   |     |     |                 | 7  | 8  |  9 |  =  |  *  | - |
-// |    | G(LEFT)| G(DOWN) |G(RIGHT)|     |     |         | 4  | 5  | 6  |     |     | + |
-// |    |    |    |    | BSPC |                                  | 1  | 2  | 3  | F10 |     | / |
-//                       | ESC | ENTER | = | 0   |  .   |
+// |CALC|  HOME  |  G(UP)  |  END   |     |     |         | 7  | 8  |  9 |  =  |  *  | - |
+// |    | G(LEFT)| G(DOWN) |G(RIGHT)|     |     |         | 4  | 5  | 6  | Vup | Vdn | + |
+// |    |        |         |        |     |BSPC |         | 1  | 2  | 3  | Vpv | Vnx | / |
+//                              | ESC | BSPC  | MEDIA PLAY | 0   |  .   |
                         bindings = <
-   &kp C_AL_CALCULATOR  &kp HOME     &kp LG(UP)    &kp END        &kp N4  &kp N5        &kp N7   &kp N8    &kp N9    &kp EQUAL &kp KP_MULTIPLY    &kp KP_MINUS
-   &trans               &kp LG(LEFT) &kp LG(DOWN)  &kp LG(RIGHT)  &trans  &trans        &kp N4   &kp N5    &kp N6    &trans    &trans             &kp KP_PLUS
-   &trans               &trans       &trans        &trans         &trans  &kp BSPC      &kp N1   &kp N2    &kp N3    &kp F10   &trans             &kp KP_DIVIDE
-                                &kp ESC      &kp RET       &kp EQUAL        &kp N0      &kp KP_DOT
+   &kp C_AL_CALCULATOR  &kp HOME     &kp LG(UP)    &kp END        &kp N4  &kp N5        &kp N7   &kp N8    &kp N9    &kp EQUAL      &kp KP_MULTIPLY    &kp KP_MINUS
+   &trans               &kp LG(LEFT) &kp LG(DOWN)  &kp LG(RIGHT)  &trans  &trans        &kp N4   &kp N5    &kp N6    &kp C_VOL_UP   &kp C_VOL_DN       &kp KP_PLUS
+   &trans               &trans       &trans        &trans         &trans  &kp BSPC      &kp N1   &kp N2    &kp N3    &kp C_PREVIOUS &kp C_NEXT         &kp KP_DIVIDE
+                                &kp ESC      &kp BSPC      &kp  C_PLAY_PAUSE        &kp N0      &kp KP_DOT
                         >;
                 };
 
@@ -67,7 +67,7 @@
 // | RGB TOG  | 1     | 2          |    3       |  4     |   5          |   |  HOME  | END |    *      |   [    |    ]   |     |    |
 // | RGB ANI+ |       | S(G(KC_S)  | C(KC_LEFT) |  UP    |  C(KC_RIGHT) |   |        |     |        |   BT1  |  BT2   |    BT3   |
 // | RGB ANI- |       |            |    LEFT    |  DOWN  |     RIGHT    |   |        |     | PLAYPAUSE | BT4    |  BT5   |  BT CLR  |
-//                                              |VOL DOWN|    VOL UP    |   | MEDIA PRE    | MEDIA NXT |
+//                                              |        |              |   |        |     |
                         bindings = <
    &rgb_ug RGB_TOG        &kp N1      &kp N2       &kp N3               &kp N4    &kp N5                        &kp HOME    &kp END    &kp ASTERISK &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PIPE2 
    &rgb_ug RGB_EFF        &none       &kp LG(LS(S))&kp LC(LEFT_ARROW)   &kp UP    &kp LC(RIGHT_ARROW)           &none       &trans     &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2
