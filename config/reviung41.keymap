@@ -21,7 +21,7 @@
                 compatible = "zmk,keymap";
 
 //                default_layer {
-//                0-base_layer {
+                  0-base_layer {
 // -------------------------------------------------------------------------------------
 // | LT(1) ESC   |  Q  |  W  |  E  |  R  |  T  |                 |  Y  |      U     |  I  |  O  |  P  |  LT(1) -  |
 // | LT(2) TAB   |  A  |  S  |  D  |  F  |  G  |                 |  H  |  LT(1) J   |  K  |  L  |  ;  |     '     |
