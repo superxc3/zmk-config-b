@@ -20,7 +20,7 @@
         keymap {
                 compatible = "zmk,keymap";
 
-//                default_layer {
+
                   0-base_layer {
 // -------------------------------------------------------------------------------------
 // | LT(1) ESC   |  Q  |  W  |  E  |  R  |  T  |                 |  Y  |      U     |  I  |  O  |  P  |  LT(1) -  |
@@ -35,7 +35,7 @@
                         >;
                 };
 
-                lower_layer {
+                1-symbol_layer {
 // ----------------------------------------------------------------------------------
 // | ~  |  !  |  @  |  #  |  $  |  %  |       |  ^  |  &  |  *  |  (  |  )  |  \  |
 // |    |     |     |     |     |     |       | )   |  {  |  }  |  [  |  ]  |  |  |
@@ -49,7 +49,7 @@
                         >;
                 };
 
-                raise_layer {
+                2-numpad_layer {
 // -----------------------------------------------------------------------------------------
 // |CALC|        |  G(UP)  |        |     |     |         | 7  | 8  |  9 |  =  |  *  | - |
 // |    | G(LEFT)| G(DOWN) |G(RIGHT)|     |     |         | 4  | 5  | 6  | Vup | Vdn | + |
@@ -63,21 +63,21 @@
                         >;
                 };
 
-                adjust_layer {
+                3-misc-rgb-bt_layer {
 // -----------------------------------------------------------------------------------------
 // | RGB TOG  | 1     | 2          |    3       |  4     |   5          |   |  HOME  | END |    *      |   [    |    ]   |     |    |
-// | RGB ANI+ |       | S(G(KC_S)  | C(KC_LEFT) |  UP    |  C(KC_RIGHT) |   |        |     |        |   BT1  |  BT2   |    BT3   |
+// | RGB ANI+ |    6  | S(G(KC_S)  | C(KC_LEFT) |  UP    |  C(KC_RIGHT) |   |        |     |        |   BT1  |  BT2   |    BT3   |
 // | RGB ANI- |       |            |    LEFT    |  DOWN  |     RIGHT    |   |        |     | PLAYPAUSE | BT4    |  BT5   |  BT CLR  |
 //                                              |        |              |   |        |     |
                         bindings = <
    &rgb_ug RGB_TOG        &kp N1      &kp N2       &kp N3               &kp N4    &kp N5                        &kp HOME    &kp END    &kp ASTERISK &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PIPE2 
    &rgb_ug RGB_EFF        &none       &kp LG(LS(S))&kp LC(LEFT_ARROW)   &kp UP    &kp LC(RIGHT_ARROW)           &none       &trans     &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2
    &rgb_ug RGB_EFR        &none       &none        &kp LEFT             &kp DOWN  &kp RIGHT                     &none       &none      &kp K_PP     &bt BT_SEL 3     &bt BT_SEL 4      &bt BT_CLR
-                                                                &kp C_VOL_UP      &kp C_VOL_DN       &none      &kp C_PREVIOUS      &trans
+                                                                &trans      &trans       &none      &trans      &trans
                         >;
                 };
                 
-                      gaming_layer {
+                      4-gaming_layer {
 // -------------------------------------------------------------------------------------
 // | ESC   |  Q  |  W  |  E  |  R  |  T  |                 |  Y  |      U     |  I  |  O  |  P  | To LAYER 0  |
 // | TAB   |  A  |  S  |  D  |  F  |  G  |                 |  H  |      J     |  K  |  L  |  ;  |       '     |
