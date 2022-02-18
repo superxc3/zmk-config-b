@@ -1,9 +1,8 @@
 # zmk-config
 
 This is a branch dedicated for Reviung41. 
-- Reviung41
-- Underglow enabled
 - Nicenano V2
+- Underglow enabled
 - NKRO enabled
 - Polling rate 1000hz
 
