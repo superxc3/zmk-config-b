@@ -1,4 +1,4 @@
-# zmk-config
+# zmk-config for Reviung41
 
 This is a branch dedicated for Reviung41. 
 - Nicenano V2
