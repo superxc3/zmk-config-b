@@ -42,6 +42,48 @@
                 ;
         };
         
+        PL: PL {
+            label = "PL";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap_time 1>
+                , <&macro_tap &kp P &kp L &kp SPACE>
+                ;
+        };
+        
+        J: J {
+            label = "J";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap_time 1>
+                , <&macro_tap &kp J &kp SPACE>
+                ;
+        };        
+        
+        M: M {
+            label = "M";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap_time 1>
+                , <&macro_tap &kp M &kp SPACE>
+                ;
+        };  
+        
+        MI: MI {
+            label = "MI";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap_time 1>
+                , <&macro_tap &kp M &kp I &kp SPACE>
+                ;
+        };        
+        
+        
+        
     };
 };
 
