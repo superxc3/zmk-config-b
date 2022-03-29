@@ -29,58 +29,7 @@
                 , <&macro_tap &kp M &kp A &kp SPACE>
                 ;
         };
-        
-        
-        
-        OF: OF {
-            label = "OF";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap_time 1>
-                , <&macro_tap &kp O &kp F &kp SPACE>
-                ;
-        };
-        
-        PL: PL {
-            label = "PL";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap_time 1>
-                , <&macro_tap &kp P &kp L &kp SPACE>
-                ;
-        };
-        
-        J: J {
-            label = "J";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap_time 1>
-                , <&macro_tap &kp J &kp SPACE>
-                ;
-        };        
-        
-        M: M {
-            label = "M";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap_time 1>
-                , <&macro_tap &kp M &kp SPACE>
-                ;
-        };  
-        
-        MI: MI {
-            label = "MI";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap_time 1>
-                , <&macro_tap &kp M &kp I &kp SPACE>
-                ;
-        };        
+          
         
         
         
@@ -148,7 +97,7 @@
 //                                              |    0    |              |   |        |     |
                         bindings = <
    &rgb_ug RGB_TOG        &kp N1   &kp N2  &kp N3               &kp N4    &kp N5                        &kp HOME             &kp END   &kp ASTERISK            &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PIPE2 
-   &rgb_ug RGB_EFF        &MA   &OF  &PL   &kp UP    &kp LC(RIGHT_ARROW)           &J   &kp UP    &kp LC(RIGHT_ARROW)     &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2
+   &rgb_ug RGB_EFF        &MA   &OF  &PL   &kp UP   &J  &kp LC(RIGHT_ARROW)              &kp UP    &kp LC(RIGHT_ARROW)     &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2
    &rgb_ug RGB_EFR        &M   &MI  &kp LEFT             &kp DOWN  &kp RIGHT                     &kp LEFT             &kp DOWN  &kp RIGHT               &bt BT_SEL 3     &bt BT_SEL 4      &bt BT_CLR
                                                                      &kp N0      &trans       &none      &trans      &trans
                         >;
