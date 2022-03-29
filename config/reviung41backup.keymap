@@ -16,6 +16,27 @@
 #define ADJUST  3-misc-rgb-bt
 #define GAMING  4-gaming
 
+
+/* Macro starts here */
+/ {
+    macros {
+        zed_em_kay: MA {
+            label = "MA";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp M &kp A &kp SPACE>
+                ;
+        };
+    };
+};
+
+
+
+
+
+
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -66,12 +87,12 @@
                 3-misc-rgb-bt_layer {
 // -----------------------------------------------------------------------------------------
 // | RGB TOG  |  1  |  2  |    3       |  4     |   5          |   |      HOME  |    END |    *         |   [    |    ]   |     |    |
-// | RGB ANI+ |  6  |  7  | C(KC_LEFT) |  UP    |  C(KC_RIGHT) |   | C(KC_LEFT) |  UP    |  C(KC_RIGHT) |   BT1  |  BT2   |    BT3   |
+// | RGB ANI+ |  MA  |  7  | C(KC_LEFT) |  UP    |  C(KC_RIGHT) |   | C(KC_LEFT) |  UP    |  C(KC_RIGHT) |   BT1  |  BT2   |    BT3   |
 // | RGB ANI- |  8  |  9  |    LEFT    |  DOWN  |     RIGHT    |   |    LEFT    |  DOWN  |     RIGHT    | BT4    |  BT5   |  BT CLR  |
 //                                              |    0    |              |   |        |     |
                         bindings = <
    &rgb_ug RGB_TOG        &kp N1   &kp N2  &kp N3               &kp N4    &kp N5                        &kp HOME             &kp END   &kp ASTERISK            &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PIPE2 
-   &rgb_ug RGB_EFF        &kp N6   &kp N7  &kp LC(LEFT_ARROW)   &kp UP    &kp LC(RIGHT_ARROW)           &kp LC(LEFT_ARROW)   &kp UP    &kp LC(RIGHT_ARROW)     &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2
+   &rgb_ug RGB_EFF        &MA   &kp N7  &kp LC(LEFT_ARROW)   &kp UP    &kp LC(RIGHT_ARROW)           &kp LC(LEFT_ARROW)   &kp UP    &kp LC(RIGHT_ARROW)     &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2
    &rgb_ug RGB_EFR        &kp N8   &kp N9  &kp LEFT             &kp DOWN  &kp RIGHT                     &kp LEFT             &kp DOWN  &kp RIGHT               &bt BT_SEL 3     &bt BT_SEL 4      &bt BT_CLR
                                                                      &kp N0      &trans       &none      &trans      &trans
                         >;
