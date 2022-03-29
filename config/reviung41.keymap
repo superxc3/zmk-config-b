@@ -20,7 +20,7 @@
 /* Macro starts here */
 / {
     macros {
-        zed_em_kay: MA {
+        MA: MA {
             label = "MA";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
