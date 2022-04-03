@@ -24,8 +24,8 @@
             compatible = "zmk,behavior-macro";
             label = "ZM_ma";
             #binding-cells = <0>;
-            wait-ms = <1>;
-            tap-ms = <1>;
+           // wait-ms = <1>;
+           // tap-ms = <1>;
                 bindings
                 = <&macro_tap &kp M &kp A &kp SPACE>
                 ;
