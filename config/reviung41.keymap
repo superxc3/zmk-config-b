@@ -27,7 +27,7 @@
             wait-ms = <1>;
             tap-ms = <1>;
                 bindings
-                = <&kp M &kp A &kp SPACE>
+                = <&macro_tap &kp M &kp A &kp SPACE>
                 ;
         };
         };
