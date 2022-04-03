@@ -20,9 +20,9 @@
 /* Macro starts here */
 / {
     macros {
-        MA: MA {
-            label = "MA";
+        my_macro: my_macro {
             compatible = "zmk,behavior-macro";
+            label = "ZM_ma";
             #binding-cells = <0>;
             wait-ms = <1>;
             tap-ms = <1>;
@@ -30,11 +30,7 @@
                 = <&kp M &kp A &kp SPACE>
                 ;
         };
-          
-        
-        
-        
-    };
+        };
 };
 
 
@@ -98,7 +94,7 @@
 //                                              |    0    |              |   |        |     |
                         bindings = <
    &rgb_ug RGB_TOG        &kp N1   &kp N2  &kp N3               &kp N4    &kp N5                        &kp HOME             &kp END   &kp ASTERISK            &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PIPE2 
-   &rgb_ug RGB_EFF        &MA   &kp N1 &kp N1   &kp UP  &kp N1  &kp LC(RIGHT_ARROW)              &kp UP    &kp LC(RIGHT_ARROW)     &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2
+   &rgb_ug RGB_EFF        &ZM_ma   &kp N1 &kp N1   &kp UP  &kp N1  &kp LC(RIGHT_ARROW)              &kp UP    &kp LC(RIGHT_ARROW)     &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2
    &rgb_ug RGB_EFR        &kp N1   &kp N1  &kp LEFT             &kp DOWN  &kp RIGHT                     &kp LEFT             &kp DOWN  &kp RIGHT               &bt BT_SEL 3     &bt BT_SEL 4      &bt BT_CLR
                                                                      &kp N0      &trans       &none      &trans      &trans
                         >;
