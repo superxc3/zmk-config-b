@@ -20,7 +20,7 @@
 /* Macro starts here */
 / {
     macros {
-        my_macro: my_macro {
+        ZM_ma: ZM_ma {
             compatible = "zmk,behavior-macro";
             label = "ZM_ma";
             #binding-cells = <0>;
