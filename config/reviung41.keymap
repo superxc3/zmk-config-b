@@ -24,10 +24,10 @@
             label = "MA";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = 
-                //<&macro_tap_time 10>
-                <&kp M>, <&kp A>, <&kp SPACE>
+            wait-ms = <1>;
+            tap-ms = <1>;
+                bindings
+                = <&kp M &kp A &kp SPACE>
                 ;
         };
           
