@@ -18,6 +18,7 @@
 
 
 /* Macro starts here */
+/*
 / {
     macros {
         MA: MA {
@@ -31,6 +32,7 @@
         };
     };
 };
+*/
 
 
 
