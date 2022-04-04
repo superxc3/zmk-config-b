@@ -17,22 +17,7 @@
 #define GAMING  4-gaming
 
 
-/* Macro starts here */
-/*
-/ {
-    macros {
-        MA: MA {
-            label = "MA";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap_time 1>
-                , <&macro_tap &kp M &kp A &kp SPACE>
-                ;
-        };
-    };
-};
-*/
+
 
 
 
@@ -95,7 +80,7 @@
 //                                              |    0    |              |   |        |     |
                         bindings = <
    &rgb_ug RGB_TOG        &kp N1   &kp N2  &kp N3               &kp N4    &kp N5                        &kp HOME             &kp END   &kp ASTERISK            &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PIPE2 
-   &rgb_ug RGB_EFF        &MA   &kp N7  &kp LC(LEFT_ARROW)   &kp UP    &kp LC(RIGHT_ARROW)           &kp LC(LEFT_ARROW)   &kp UP    &kp LC(RIGHT_ARROW)     &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2
+   &rgb_ug RGB_EFF        &kp N1   &kp N7  &kp LC(LEFT_ARROW)   &kp UP    &kp LC(RIGHT_ARROW)           &kp LC(LEFT_ARROW)   &kp UP    &kp LC(RIGHT_ARROW)     &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2
    &rgb_ug RGB_EFR        &kp N8   &kp N9  &kp LEFT             &kp DOWN  &kp RIGHT                     &kp LEFT             &kp DOWN  &kp RIGHT               &bt BT_SEL 3     &bt BT_SEL 4      &bt BT_CLR
                                                                      &kp N0      &trans       &none      &trans      &trans
                         >;
